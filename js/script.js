@@ -15,3 +15,35 @@ function getNumberInfo() {
     // Display Information in the Browser
     document.getElementById("numinfo").innerHTML = txt;
 }
+
+/*
+    Function to return the smallest positive integer, such that multiplied
+    by integers {2,3,...,n}, contain the same digits.
+
+    permutedMultiples(2) returns 125874.
+    permutedMultiples(6) returns 142857.
+*/
+function permutedMultiples(n) {
+    const isPermutation = (a,b) => a.length !== b.length ? false : a.split('').sort().join() === b.split('').sort().join();
+    let start = 1;
+    let found = false;
+    let result = 0;
+    while (!found) {
+        start *= 10;
+        for (let i=start;i<start*10/n;i++) {
+            found = true;
+            for (let j=2;j<=n;j++) {
+                if (!isPermutation(i+'', j*i+'')) {
+                    found = false;
+                    break;
+                }
+            }
+
+            if (found) {
+                result = i;
+                break;
+            }
+        }
+    }
+    return result;
+}
