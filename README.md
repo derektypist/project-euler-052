@@ -10,7 +10,7 @@ Information at [Project Euler 052](https://projecteuler.net/problem=52)
 
 **Getting Started**
 
-Enter a whole number between 2 and 6 and select the Submit Button.
+Enter a whole number between 2 and 6 and select the Submit Button.  Unless you have made an invalid input, you will see the number entered (n) as well as the smallest positive integer multiplied by {2,3,...,n} containing the same digits.  Select the Reset Button to clear the information or to start again.
 
 **User Stories**
 
