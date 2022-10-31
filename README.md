@@ -14,6 +14,14 @@ Enter a whole number between 2 and 6 and select the Submit Button.  Unless you h
 
 **User Stories**
 
+As a user, I expect to get an error message, if I do any of the following:
+
+- Not enter anything in the input field
+- Entering text other than a number
+- Entering a number less than 2 or greater than 6
+- Including leading zeros such as 02
+- Entering a number, but it is not an integer
+
 As a user, I expect the function `permutedMultiples(2)` to return a number.
 
 As a user, I expect the function `permutedMultiples(2)` to return 125874.
@@ -24,5 +32,10 @@ User Stories on function `permutedMultiples(n)` taken from [FreeCodeCamp - Codin
 
 **Information Architecture**
 
-The function `permutedMultiples(n)` returns a number, where n is a number.
+The function `permutedMultiples(n)` returns a number, where n is a number between 2 and 6.
+
+**Features**
+
+Allows the user to enter a number, as well as getting the smallest positive integer multiplied by integers {2, 3, ..., number entered}, containing the same digits.  Performs checks on valid user input.  If the input is not valid, an error message is displayed.
+
 
