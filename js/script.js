@@ -8,8 +8,8 @@ function getNumberInfo() {
     if (isNaN(num) || num.length==0 || num<2 || num>6 || (num.length>1 && num[0]=="0") || !Number.isInteger(Number(num))) {
         txt += `Invalid Input.  Please enter a whole number between 2 and 6.  Do not include leading zeros.`;
     } else {
-        txt += `You have entered ${num}. <p>`;
-        txt += `Smallest Integer is ${permutedMultiples(num)}.`;
+        txt += `You have entered the number ${num}. <p>`;
+        txt += `Smallest Positive Integer is ${permutedMultiples(num)}.`;
     }
 
     // Display Information in the Browser
